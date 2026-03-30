@@ -6,6 +6,7 @@ module Ferdaplan {
 
     opens hi.vidmot to javafx.fxml;
     opens hi.vidmot.controller to javafx.fxml;
+    opens hi.vidmot.view to javafx.fxml;
     exports hi.vidmot;
     exports hi.vinnsla;
 }

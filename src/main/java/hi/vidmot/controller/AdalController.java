@@ -3,13 +3,13 @@ package hi.vidmot.controller;
 import hi.vidmot.view.FerdSpjald;
 import hi.vinnsla.Ferd;
 import javafx.fxml.FXML;
-import javafx.scene.layout.HBox;
+import javafx.scene.layout.FlowPane;
 
 import static hi.vinnsla.Ferdaplan.ferdaplan;
 
 public class AdalController {
 
-    @FXML private HBox fxCards;
+    @FXML private FlowPane fxCards;
 
     public void initialize(){
         // iterate ferdaplan
@@ -22,5 +22,12 @@ public class AdalController {
 
             fxCards.getChildren().add(spjald);
         }
+        System.out.println("Fjöldi ferða: " + ferdaplan.size());
+
+    }
+
+    @FXML
+    private void onAdd() {
+
     }
 }
