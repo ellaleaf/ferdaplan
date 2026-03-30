@@ -20,7 +20,7 @@
                                 <Label text="Name:" />
                                 <TextField fx:id="fxName" />
                                 <Label text="Destination:" />
-                                <TextField fx:id="fxDestiantion" />
+                                <TextField fx:id="fxDestination" />
                                 <Label text="Date:" />
                                 <HBox prefHeight="26.0" prefWidth="460.0">
                                     <children>
