@@ -11,7 +11,6 @@ import java.util.Date;
 import static hi.vidmot.switcher.ViewSwitcher.switchTo;
 
 public class FerdController implements GognInterface{
-    private Ferd f;
     @FXML
     private TextField fxName;
     @FXML private TextField fxDestination;
@@ -20,7 +19,7 @@ public class FerdController implements GognInterface{
     @FXML private TextField fxBudget;
     @Override
     public void setGogn(Object data) {
-        f = (Ferd) data;
+        Ferd f = (Ferd) data;
         fxName.textProperty().bind(f.name);
         fxDestination.textProperty().bind(f.destination);
         fxDateFrom.promptTextProperty().bind(f.dateFrom);
@@ -35,5 +34,10 @@ public class FerdController implements GognInterface{
     public void onILagi(){
         View view = View.ADAL;
         switchTo(view);
+    }
+
+    public void onAdd() {
+        System.out.println("add pressed for: " + fxName.getText());
+        // TODO: implement edit logic
     }
 }

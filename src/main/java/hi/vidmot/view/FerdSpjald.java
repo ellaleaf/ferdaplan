@@ -1,5 +1,6 @@
 package hi.vidmot.view;
 
+import hi.vidmot.switcher.View;
 import hi.vinnsla.Ferd;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -7,6 +8,7 @@ import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.FlowPane;
 
+import static hi.vidmot.switcher.ViewSwitcher.switchTo;
 import static hi.vinnsla.Ferdaplan.ferdaplan;
 
 
@@ -49,8 +51,8 @@ public class FerdSpjald extends AnchorPane {
 
     @FXML
     private void onEdit() {
-        System.out.println("Edit pressed for: " + fxName.getText());
-        // TODO: implement edit logic
+        View view = View.FERD;
+        switchTo(view,false, ferd);
     }
 
 
