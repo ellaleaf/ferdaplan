@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
@@ -12,59 +13,66 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.shape.Line?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="599.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hi.vidmot.controller.FerdController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="599.0" prefWidth="600.0" styleClass="scrollable" stylesheets="@css/overflow.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hi.vidmot.controller.FerdController">
     <children>
-        <VBox prefHeight="598.0" prefWidth="600.0" spacing="5.0">
-            <children>
-                <Label text="Name:" />
-                <TextField fx:id="fxName" editable="false" />
-                <Label text="Destination:" />
-                <TextField fx:id="fxDestination" editable="false" prefHeight="2.0" prefWidth="580.0" />
-                <Label text="Date:" />
-                <HBox prefHeight="0.0" prefWidth="600.0">
-                    <children>
-                        <DatePicker fx:id="fxDateFrom" disable="true">
-                            <HBox.margin>
-                                <Insets right="10.0" />
-                            </HBox.margin>
-                        </DatePicker>
-                        <DatePicker fx:id="fxDateTo" disable="true">
-                            <HBox.margin>
-                                <Insets left="10.0" />
-                            </HBox.margin>
-                        </DatePicker>
-                    </children>
-                </HBox>
-                <Label text="Budget:" />
-                <TextField fx:id="fxBudget" editable="false" />
-              <Line endX="344.29290771484375" endY="-0.20710676908493042" startX="-100.0">
-               <VBox.margin>
-                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-               </VBox.margin>
-            </Line>
-            <ScrollPane>
-               <content>
-                  <FlowPane prefHeight="273.0" prefWidth="580.0" />
-               </content>
-            </ScrollPane>
-            <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0">
-               <children>
-                  <Button mnemonicParsing="false" onAction="#onILagi" text="Done">
-                     <HBox.margin>
-                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                     </HBox.margin>
-                  </Button>
-                  <Button mnemonicParsing="false" onAction="#onAdd" text="+">
-                     <HBox.margin>
-                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                     </HBox.margin>
-                  </Button>
-               </children>
-            </HBox>
-            </children>
-            <padding>
-                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-            </padding>
-        </VBox>
+      <ScrollPane hbarPolicy="NEVER" prefHeight="599.0" prefWidth="600.0" vbarPolicy="ALWAYS" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <content>
+              <VBox prefHeight="598.0" prefWidth="600.0" spacing="5.0">
+                  <children>
+                      <Label text="Name:" />
+                      <TextField fx:id="fxName" editable="false" />
+                      <Label text="Destination:" />
+                      <TextField fx:id="fxDestination" editable="false" prefHeight="2.0" prefWidth="580.0" />
+                      <Label text="Date:" />
+                      <HBox prefHeight="0.0" prefWidth="600.0">
+                          <children>
+                              <DatePicker fx:id="fxDateFrom" disable="true">
+                                  <HBox.margin>
+                                      <Insets right="10.0" />
+                                  </HBox.margin>
+                              </DatePicker>
+                              <DatePicker fx:id="fxDateTo" disable="true">
+                                  <HBox.margin>
+                                      <Insets left="10.0" />
+                                  </HBox.margin>
+                              </DatePicker>
+                          </children>
+                      </HBox>
+                      <Label text="Budget:" />
+                      <TextField fx:id="fxBudget" editable="false" />
+                    <Line endX="344.29290771484375" endY="-0.20710676908493042" startX="-100.0">
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </VBox.margin>
+                  </Line>
+                  <ScrollPane>
+                     <content>
+                        <FlowPane prefHeight="273.0" prefWidth="580.0" />
+                     </content>
+                  </ScrollPane>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" stylesheets="@css/buttons.css">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#onILagi" styleClass="blueButton" text="Done">
+                           <HBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#onAdd" styleClass="blueButton" text="Add activity">
+                           <HBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                  </HBox>
+                  </children>
+                  <padding>
+                      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                  </padding>
+              </VBox>
+         </content>
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+      </ScrollPane>
     </children>
 </AnchorPane>

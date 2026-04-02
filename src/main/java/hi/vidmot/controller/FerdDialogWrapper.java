@@ -21,11 +21,16 @@ public class FerdDialogWrapper {
             dialog.initOwner(owner);
             dialog.getDialogPane().setContent(fxmlLoader.getRoot());
 
+            String css = this.getClass().getResource("/hi/vidmot/css/buttons.css").toExternalForm();
+            dialog.getDialogPane().getStylesheets().add(css);
+
             ButtonType okButton = new ButtonType("Í lagi", ButtonBar.ButtonData.OK_DONE);
             ButtonType cancelButton = new ButtonType("Hætta við", ButtonBar.ButtonData.CANCEL_CLOSE);
             dialog.getDialogPane().getButtonTypes().addAll(okButton, cancelButton);
-            dialog.getDialogPane().lookupButton(okButton).setStyle("-fx-font-size: 24;");
-            dialog.getDialogPane().lookupButton(cancelButton).setStyle("-fx-font-size: 24;");
+            dialog.getDialogPane().lookupButton(okButton).setStyle("-fx-font-size: 12;");
+            dialog.getDialogPane().lookupButton(okButton).getStyleClass().add("blueButton");
+            dialog.getDialogPane().lookupButton(cancelButton).setStyle("-fx-font-size: 12;");
+            dialog.getDialogPane().lookupButton(cancelButton).getStyleClass().add("redButton");
 
             dialog.setResultConverter(button -> {
                 if (button == okButton) {

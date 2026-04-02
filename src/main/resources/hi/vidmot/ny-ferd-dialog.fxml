@@ -48,7 +48,7 @@
             </children></AnchorPane>
     </header>
     <content>
-        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="0.0" prefWidth="480.0">
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="0.0" prefWidth="480.0" stylesheets="@css/buttons.css">
         </AnchorPane>
     </content>
     <expandableContent>

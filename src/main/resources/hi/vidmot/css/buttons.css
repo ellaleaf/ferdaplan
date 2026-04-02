@@ -1,0 +1,17 @@
+.blueButton {
+    -fx-text-fill: white;
+    -fx-background-color: rgba(83, 157, 235, 1);
+    -fx-border-radius: 5px;
+}
+
+.redButton {
+    -fx-text-fill: white;
+    -fx-background-color: rgba(235, 83, 83, 1);
+    -fx-border-radius: 5px;
+}
+
+.addButton {
+    -fx-text-fill: white;
+    -fx-background-color: rgba(83, 157, 235, 1);
+    -fx-border-radius: 99px;
+}
