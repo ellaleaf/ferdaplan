@@ -40,6 +40,7 @@ public class FerdSpjald extends AnchorPane {
         fxDestination.textProperty().bind(ferd.destination);
         fxDate.textProperty().setValue(ferd.getDate());
         fxBudget.textProperty().bind(ferd.budget);
+
     }
 
     @FXML

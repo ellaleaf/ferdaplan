@@ -7,7 +7,8 @@ package hi.vidmot.switcher;
  */
 public enum View {
     ADAL("/hi/vidmot/adal-view.fxml"),
-    FERD("/hi/vidmot/ferd-view.fxml");
+    FERD("/hi/vidmot/ferd-view.fxml"),
+    TODO("hi/vidmot/ny-toDo-dialog.fxml");
 
 
     private String fileName;
